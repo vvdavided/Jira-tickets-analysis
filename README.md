@@ -27,3 +27,4 @@ This data project analyzes several years of Jira support (`CNSD`) and developmen
 - How long do issues remain in each status?
 
 
+This is an ongoing project, more analysis to come
