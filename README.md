@@ -7,7 +7,7 @@ This data project analyzes several years of Jira support (`CNSD`) and developmen
 ---
 
 
-📘 [Exploratory Analysis Notebook](notebooks/01 EDA Support.ipynb)
+📘 [Support tickets exploratory analysis Notebook](notebooks/01 EDA Support.ipynb)
 
 
 ## Project structure
