@@ -32,10 +32,10 @@ plt.show()
 
 df_sprt['Year-Month'] = df_sprt['Created'].dt.to_period('M').astype(str)
 
-# Agrupar por Year-Month y Work category
+
 ticket_counts = df_sprt.groupby(['Year-Month', 'Work category']).size().unstack(fill_value=0)
 
-# Plot de barras apiladas
+
 ticket_counts.plot(kind='bar', stacked=True, figsize=(12, 6), colormap='crest')
 
 plt.title('Created support tickets per Year-Month by Work Category')
@@ -50,10 +50,10 @@ plt.show()
 
 df_dev['Weekday'] = df_dev['Created'].dt.day_name()
 
-# Orden de los días de la semana
+
 order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
-# Contar tickets por día
+
 grouped = df_dev.groupby(['Weekday']).size().unstack(fill_value=0)
 grouped = grouped.reindex(order)
 
@@ -67,17 +67,17 @@ plt.legend(title="Work Category")
 plt.tight_layout()
 plt.show()
 
-#%% Hora del día
+#%% Hour of the day
 df_dev['Created Hour'] = df_dev['Created'].dt.hour
 
-# Agrupar por hora y Work category
+# group by hour and Work category
 count = df_dev['Created Hour'].value_counts().sort_index()
 
 
 
 hour_labels = [f"{h%12 or 12} {'AM' if h < 12 else 'PM'}" for h in grouped.index]
 
-# Gráfico de barras apiladas
+
 count.plot(x='Created Hour',y='count', kind='bar', stacked=True, colormap='crest')
 
 plt.title("Created support tickets by Hour of the Day and Work Category")
