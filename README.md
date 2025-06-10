@@ -1,20 +1,29 @@
-# MTZ Jira Issues Analysis
+# 📊 Jira Tickets Analysis - Support & Development
 
-Este proyecto analiza los tickets de soporte (SPRT) y desarrollo (DEV) extraídos desde Jira, con el objetivo de identificar patrones, tiempos de respuesta y otros insights relevantes.
+This data project analyzes several years of Jira support (`CNSD`) and development (`CNXT`) tickets from a real software team. The goal is to uncover actionable insights that help the organization identify strengths, bottlenecks, and opportunities for process improvement.
 
-## Estructura del proyecto
+> 🛡️ All data has been anonymized to remove any personally identifiable information (PII) and sensitive content.
 
-- `data/raw/`: Archivos `.pkl` y descargas directamente desde Jira
-- `data/processed/`: Datos limpios y combinados
-- `scripts/`: Scripts Python usados para descargar o procesar los datos
-- `notebooks/`: Análisis en Jupyter Notebooks
-- `outputs/`: Gráficos y archivos generados
+---
 
-## Objetivos
 
-- Entender diferencias entre tickets de soporte y desarrollo
-- Analizar tiempos de atención y resolución
-- Identificar oportunidades de mejora o automatización
+📘 [Exploratory Analysis Notebook](notebooks/01 EDA Support.ipynb)
 
+
+## Project structure
+
+- `data/raw/`: `.pkl` files and raw data exported directly from Jira  
+- `data/processed/`: Cleaned and merged datasets  
+- `scripts/`: Python scripts used for data extraction and processing
+- `notebooks/`: Jupyter notebooks containing the analysis
+- `outputs/`: Generated charts and output files
+
+
+## 📌 Key Questions Explored
+
+- What is the volume and trend of tickets over time?
+- Are there patterns in ticket creation by day of week or hour?
+- How are tickets distributed by work category?
+- How long do issues remain in each status?
 
 
